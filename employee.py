@@ -5,6 +5,8 @@ class Employee():
         self.name = name
         self.skills = []
         self.add_staff()
+        self.salary = ''
+        self.title = ''
 
     def add_staff(self):
         self.staff.append(self.name)
@@ -22,3 +24,13 @@ class Employee():
         print('skills of {} : '. format(self.name))
         for skill in self.skills:
             print(skill)
+            
+    def add_salary(self, salary):
+        self.salary.append(salary)
+
+    def add_title(self, title):
+        self.title.append(title)
+
+    def see_attribute(self):
+        print('attributes of {} : skills: {} \n title: {} \n salary: {}'
+              .format(self.name, self.skills, self.title, self.salary))
